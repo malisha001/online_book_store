@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+    min-width: 0;
+}
+body {
+    background: #ece1cf;
+    
+}
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #f0ede2;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: relative;
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.group {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #303846;
+}
+
+header ul li a:hover {
+    color: #414e57;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    padding-right: 30px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+}
+
+.searchbar {
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbar.active {
+    right: 0;
+}
+
+.searchbar input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.25em;
+    color: #303846;
+}
+
+.searchbtn {
+    position: relative;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbtn.active {
+    left: 0;
+}
+
+.cartbtn {
+    position: relative;
+    padding-right: 5px;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+
+.cartbtn.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.userbtn {
+    position: relative;
+    padding-left: 5px;
+    left: 30px;
+    right: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+
+.userbtn.active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.usermenu {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.usermenu.openmenu{
+    max-height: 400px;
+}
+
+.submenu{
+    background:#303846;
+    padding: 20px;
+    margin: 10px;
+    color: #f0ede2;
+}
+
+.userinfo{
+    display: flex;
+    align-items: center;
+}
+
+.userinfo h4 {
+    font-weight: 500;
+}
+
+.userinfo > h4:nth-child(1) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.submenu > hr:nth-child(2) {
+    margin-top: 0px;
+}
+
+.submenu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #f0ede2;
+    margin: 15px 0 10px;
+}
+
+.headbuttons {
+    padding: 5px 15px;
+    background-color: #42515a;
+    color: aliceblue;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: medium;
+}
+
+.headbuttons:hover {
+    background-color: #be8c64;
+}
+
+.headerbtn {
+    margin-left: 20px;
+}
+
+.closebtn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.closebtn.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+}
+
+.menubtn {
+    position: relative;
+    display: none;
+}
+
+@media (max-width: 800px){
+    .searchbtn {
+        left: 0;
+    }
+
+    .menubtn {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+
+    header .navi{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+
+    header.open .navi {
+        top: 80px;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #f0ede2;
+        width: 100%;
+        height: calc(100vh-80px);
+        padding: 40px;
+        border-top: 1px solid #303846;
+    }
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair', serif;
+  background-color: #ebe1cf;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #42515a;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+li, a, button {
+    font-family: 'Playfair', serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px ;
+    background-color: #f1ede0;
+}
+
+.navlinks {
+    list-style: none;
+}
+
+.navlinks li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navlinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navlinks li a:hover {
+    color: #42515a;
+}
+
+.headbuttons {
+    padding: 9px 25px;
+    background-color: #42515a;
+    color: aliceblue;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.headbuttons:hover {
+    background-color: #313b47;
+}
+
+.headerbtn {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.searchbar {
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 23px;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: auto;
+    padding: 0px;
+}
+
+.searchbar input[type=search] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 13px;
+    border: none;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.searchbar button {
+    background-color:transparent;
+    color: #313b47;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 6px 6px;
+    margin-top: 8px;
+    margin-left: -5px;
+}
+
+

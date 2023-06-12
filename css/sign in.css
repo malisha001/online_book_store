@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+    min-width: 0;
+}
+.mainpart{   
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerss{
+    position: relative;
+    max-width: 430px;
+    width: 370px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.containerss .form{
+    padding: 30px;
+}
+.containerss .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600px;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+.form .input-field{
+    position: relative;
+    height: 50px;
+    margin-top: 30px;
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+.input-field input:is(:focus,:valid){
+    border-bottom-color: #2845e7;
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+}
+.form .forgot{
+    margin-top: 20px;
+}
+.form a{
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #2845e7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button input:hover{
+    background-color: #4070f4;
+}
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+#error,
+#error1,
+#error2,
+#error3,
+#error4,
+#error5,
+#error6
+ {
+    color: red;
+    font-size: small;
+}

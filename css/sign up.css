@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+    min-width: 0;
+}
+.wrapper{
+    width: auto;
+    height: auto;
+    border: 2px solid rgba(231, 172, 172, 0.5);
+    border-radius: 30px;
+    padding: 30px;
+    backdrop-filter: blur(20px);
+}
+.para{
+    display: flex;
+    justify-content:space-between;
+}
+#error{
+    color: red;
+    font-size: 13px;
+}
+#error1{
+    color: red;
+    font-size: 13px;
+}
+#error2{
+    color: red;
+    font-size: 13px;
+}
+#error3{
+    color: red;
+    font-size: 13px;
+}
+#error4{
+    color: red;
+    font-size: 13px;
+}
