@@ -1,12 +1,11 @@
 <?php 
 
 function getUserById($id, $db){
-    $sql = "SELECT * FROM customers WHERE id = ?";
-	$stmt = $db->prepare($sql);
-	$stmt->execute([$id]);
+    $sql = "SELECT * FROM customers WHERE email = '$id'";
+    $result = $db->query($sql);
     
-    if($stmt->rowCount() == 1){
-        $user = $stmt->fetch();
+    if($result->num_rows == 1){
+        $user = $result->fetch_assoc();
         return $user;
     }else {
         return 0;

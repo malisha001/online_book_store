@@ -1,11 +1,11 @@
 <?php 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
-include "db_conn.php";
+if (isset($_SESSION["usename"])) {
+include "connection.php";
 include 'php/User.php';
 
-$user = getUserById($_SESSION['id'], $conn);
+$user = getUserById($_SESSION['usename'], $connection);
 
  ?>
 <!DOCTYPE html>
@@ -72,8 +72,8 @@ $user = getUserById($_SESSION['id'], $conn);
           </div>
           
           <button type="submit" class="btn btn-primary">Update</button>
+            </form>
           <a href="profile.php" class="link-secondary">Home</a>
-        </form>
     </div>
     <?php }else{ 
         header("Location: home.php");

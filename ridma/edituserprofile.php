@@ -1,14 +1,16 @@
 <?php 
-session_start();
+
 
 include 'php/User.php';
-
-$user;
+include "connection.php";
 
 ?>
 
 <?php
-require 'head.php'
+require 'head.php';
+
+$user = getUserById($_SESSION["usename"], $connection);
+
 ?>
     <link rel="stylesheet" href="css/userprofile.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -43,7 +45,7 @@ require 'head.php'
         <input type="text" 
                class="form-control"
                name="fname"
-               value="<?php echo $user['fname']?>">
+               value="<?php echo $user['first_name']?>">
       </div>
 
       <div class="mb-3">
@@ -51,10 +53,10 @@ require 'head.php'
         <input type="text" 
                class="form-control"
                name="uname"
-               value="<?php echo $user['username']?>">
+               value="<?php echo $user['email']?>">
       </div>
 
-      <div class="mb-3">
+      <!--<div class="mb-3">
         <label class="form-label">Profile Picture</label>
         <input type="file" 
                class="form-control"
@@ -66,11 +68,12 @@ require 'head.php'
                hidden="hidden" 
                name="old_pp"
                value="<?=$user['pp']?>" >
-      </div>
+      </div>-->
       
       <button type="submit" class="btn btn-primary">Update</button>
-      <a href="profile.php" class="link-secondary">Home</a>
     </form>
+      <a href="deleteProfile.php" class="btn btn-primary">Delete</a>
+      <a href="profile.php" class="link-secondary">Home</a>
 </div>
 
       
