@@ -71,9 +71,10 @@ $user = getUserById($_SESSION["usename"], $connection);
       </div>-->
       
       <button type="submit" class="btn btn-primary">Update</button>
-    </form>
-      <a href="deleteProfile.php" class="btn btn-primary">Delete</a>
+      <br><br>
+      <a href="deleteProfile.php" class="btn btn-danger">Delete</a>
       <a href="profile.php" class="link-secondary">Home</a>
+    </form>
 </div>
 
       
