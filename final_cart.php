@@ -6,14 +6,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $userID = $_SESSION["usename"];
     $ftotal = $_POST["ftotal"];
 
+    $sql = "DELETE FROM final_cart WHERE c_name = '$userID'";
 
-    $sql = "INSERT INTO final_cart(c_name,final_payment) VALUES ('$userID','$ftotal')";
     if($conn->query($sql)){
-        echo "<script>alert('creat account succesfully.'); window.location.href = 'payment/paymentpage.php';</script>";
+
+        $sql = "INSERT INTO final_cart(c_name,final_payment) VALUES ('$userID','$ftotal')";
+        if($conn->query($sql)){
+            echo "<script>alert('creat account succesfully.'); window.location.href = 'payment/paymentpage.php';</script>";
+        }
+        else{
+            echo"<script>alert('error')</script>";
+        }
+
     }
-    else{
-        echo"<script>alert('error')</script>";
-    }
+    
 }
 else{
     header('sign_up.html');

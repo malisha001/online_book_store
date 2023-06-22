@@ -20,7 +20,7 @@ require 'head.php';
     		<img src="upload/profile.png"
     		     class="img-fluid rounded-circle">
              
-            <h3 class="display-4 ">shiwantha</h3>
+            <h3 class="display-4 "><?php echo $_SESSION["usename"]; ?></h3>
             <a href="edituserprofile.php" class="btn btn-primary">
             	Edit Profile
             </a>
@@ -32,7 +32,7 @@ require 'head.php';
       <div class="shadow w-350 p-4 text-center align-items-center" style="margin-left: 10px;">
 
           <a href="orderDetails.php" class="btn btn-primary">Order Details</a>
-          <a href="cart.php" class="btn btn-primary">Cart Details</a>
+          <a href="../cart.php" class="btn btn-primary">Cart Details</a>
         
         
     		

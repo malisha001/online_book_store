@@ -1,19 +1,18 @@
 <?php  
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['fname'])) {
+if (isset($_SESSION['usename'])) {
 
 
 
 if(isset($_POST['fname']) && 
    isset($_POST['uname'])){
 
-    include "../db_conn.php";
+    include "../connection.php";
 
     $fname = $_POST['fname'];
     $uname = $_POST['uname'];
-    $old_pp = $_POST['old_pp'];
-    $id = $_SESSION['id'];
+    $id = $_SESSION['usename'];
 
     if (empty($fname)) {
     	$em = "Full name is required";
@@ -27,7 +26,7 @@ if(isset($_POST['fname']) &&
 
       if (isset($_FILES['pp']['name']) AND !empty($_FILES['pp']['name'])) {
          
-        
+        /*
          $img_name = $_FILES['pp']['name'];
          $tmp_name = $_FILES['pp']['tmp_name'];
          $error = $_FILES['pp']['error'];
@@ -71,12 +70,12 @@ if(isset($_POST['fname']) &&
             exit;
          }
 
-        
+        */
       }else {
-       	$sql = "UPDATE users 
-       	        SET fname=?, username=?
-                WHERE id=?";
-       	$stmt = $conn->prepare($sql);
+       	$sql = "UPDATE customers 
+       	        SET first_name=?, email=?
+                WHERE email=?";
+       	$stmt = $connection->prepare($sql);
        	$stmt->execute([$fname, $uname, $id]);
 
        	header("Location: ../edituserprofile.php?success=Your account has been updated successfully");
