@@ -41,7 +41,7 @@ session_start();
                         <div class="userinfo">
                         <?php 
                                 if(isset($_SESSION["usename"])){
-                                    echo'<h4>'.'hellow '.$_SESSION["usename"].'</h4>';
+                                    echo'<h4>'.'Hello '.$_SESSION["usename"].'</h4>';
                                 }
                                 else{
                                     echo "<h4> welcome,guset</h4>";

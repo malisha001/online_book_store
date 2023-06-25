@@ -159,6 +159,7 @@ header ul li a:hover {
 }
 
 .submenu{
+    position: relative;
     background:#303846;
     padding: 20px;
     margin: 10px;
@@ -296,7 +297,6 @@ header ul li a:hover {
     justify-content:flex-start;
     align-items: center;
     background: #be8c64;
-    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;

@@ -1,4 +1,6 @@
-<?php require '../../../head.php'; ?>
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +18,12 @@
 <body>
 
     <!--Header start-->
-    <!-- <header>
+    <header>
         <a href="main.html"><img class="logo"  src="content/logo.png"></a>
 
         <div class="group">
             <ul class="navi">
-                <li><a href="main.html">Home</a></li>
+                <li><a href="../../../homepage.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="books.html">Books</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -29,7 +31,6 @@
 
             <div class="search">
                 <span class="icon">
-                    <ion-icon name="search-outline" class="searchbtn"></ion-icon>
                     <ion-icon name="close-outline" class="closebtn"></ion-icon>
                     <a href="cart.html"><ion-icon name="cart-outline" class="cartbtn"></ion-icon></a>
                     <ion-icon name="person-outline" class="userbtn" onclick="toggleMenu()"></ion-icon>
@@ -38,17 +39,27 @@
                 <div class="usermenu" id="submenu">
                     <div class="submenu">
                         <div class="userinfo">
-                            <h4>Welcome, Guest!</h4>
+                        <?php 
+                                if(isset($_SESSION["usename"])){
+                                    echo'<h4>'.'Hello '.$_SESSION["usename"].'</h4>';
+                                }
+                                else{
+                                    echo "<h4>Welcome, guest</h4>";
+                                }
+                            ?>
                         </div>
                         <hr>
 
                         <div>
-                            <a class="cta" href="signin.html">
-                                <button class="headbuttons">Sign In</button>
-                            </a>
-                            <a class="cta" href="signup.html">
-                                <button class="headbuttons">Sign Up</button>
-                            </a>
+                        <?php
+                            if(isset($_SESSION["usename"])){
+                                echo '<a class="cta" href="logout.php"><button class="headbuttons">Log Out</button></a>';
+                            }
+                            else{
+                                echo '<a class="cta" href="sign_in.php"><button class="headbuttons">Sign In</button></a>';
+                                echo '<a class="cta" href="sign_up.php"><button class="headbuttons">Sign Up</button></a>';
+                            }
+                        ?>
                         </div>
                     </div>
                 </div>
@@ -59,8 +70,7 @@
         <div class="searchbar">
             <input type="search" placeholder="Search">
         </div>
-    </header> -->
-
+    </header>
     <!--Header end-->
     <!--body start-->
 

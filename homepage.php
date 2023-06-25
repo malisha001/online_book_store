@@ -208,9 +208,9 @@
             <div class="quicklinks">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="ridma/about.php">About</a></li>
                     <li><a href="ridma/FAQ.html">FAQ</a></li>
-                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="ridma/privacy.php">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms & Conditions</a></li>
                     <li><a href="help.html">Help</a></li>
                     <li><a href="contact.html">Contact</a></li>

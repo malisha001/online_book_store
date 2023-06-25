@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/head.css">
-    <script src="js/headFoote.js" defer></script>
+    <script src="js/headFoot.js" defer></script>
 
     <!--icon pack installation-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -53,7 +53,7 @@ session_start();
                         <div>
                         <?php
                             if(isset($_SESSION["usename"])){
-                                echo '<a class="cta" href="logout.php"><button class="headbuttons">log out</button></a>';
+                                echo '<a class="cta" href="logoutt.php"><button class="headbuttons">log out</button></a>';
                             }
                             else{
                                 echo '<a class="cta" href="sign_in.php"><button class="headbuttons">Sign In</button></a>';
