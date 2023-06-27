@@ -23,9 +23,9 @@ session_start();
         <div class="group">
             <ul class="navi">
                 <li><a href="homepage.php">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ridma/about.php">About</a></li>
+                <!-- <li><a href="books.html">Books</a></li> -->
+                <!-- <li><a href="ridma/contact.php">Contact</a></li> -->
             </ul>
 
             <div class="search">

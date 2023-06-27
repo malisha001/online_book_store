@@ -60,9 +60,9 @@
         <div class="group">
             <ul class="navi">
                 <li><a href="homepage.php">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="ridma/about.php">About</a></li>
+                <!-- <li><a href="books.html">Books</a></li> -->
+                <!-- <li><a href="ridma/contact.php">Contact</a></li> -->
             </ul>
 
             <div class="search">
@@ -91,7 +91,12 @@
                         <?php
                             if(isset($_SESSION["usename"])){
                                 echo '<a class="cta" href="logout.php"><button class="headbuttons">Log Out</button></a>';
-                                echo '<a class="cta" href="ridma/profile.php"><button class="headbuttons">view profile</button></a>';
+                                if($_SESSION["usename"]=="ayomal11@gmail.com"){
+                                echo '<a class="cta" href="Admin/admin.php"><button class="headbuttons">view Admin</button></a>';
+                                }
+                                else{
+                                    echo '<a class="cta" href="ridma/profile.php"><button class="headbuttons">view profile</button></a>';
+                                }
                             }
                             else{
                                 echo '<a class="cta" href="sign_in.php"><button class="headbuttons">Sign In</button></a>';

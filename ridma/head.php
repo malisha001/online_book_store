@@ -23,9 +23,8 @@ session_start();
         <div class="group">
             <ul class="navi">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="ridma/about.php">About</a></li>
+
             </ul>
 
             <div class="search">
@@ -41,7 +40,7 @@ session_start();
                         <div class="userinfo">
                         <?php 
                                 if(isset($_SESSION["usename"])){
-                                    echo'<h4>'.'hellow '.$_SESSION["usename"].'</h4>';
+                                    echo'<h4>'.'hello '.$_SESSION["usename"].'</h4>';
                                 }
                                 else{
                                     echo "<h4> welcome,guset</h4>";

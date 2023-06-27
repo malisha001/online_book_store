@@ -84,11 +84,10 @@
 
         <div class="adminnav">
             <ul class="adminnav">
-                <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="pages/adminbooks/index.php">Books</a></li>
                 <li><a href="pages/adminorders/index.php">Orders</a></li>
                 <li><a href="pages/adminusers/index.php">Users</a></li>
-                <li><a href="pages/adminreviews/index.html">Reviews</a></li>
+                
             </ul>
         </div>
     </div>

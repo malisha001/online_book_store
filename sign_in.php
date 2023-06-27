@@ -21,7 +21,7 @@
                         <div class="input-field">
                             <input type="password" placeholder="Enter your password" name="pwd1">
                             <i class="uil uil-padlock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
+                            
                         </div>
                         <p id="error6" ></p>
                         <!-- <div class="forgot">

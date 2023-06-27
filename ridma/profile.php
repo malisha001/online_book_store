@@ -31,8 +31,8 @@ require 'head.php';
 
       <div class="shadow w-350 p-4 text-center align-items-center" style="margin-left: 10px;">
 
-          <a href="orderDetails.php" class="btn btn-primary">Order Details</a>
-          <a href="../cart.php" class="btn btn-primary">Cart Details</a>
+          <!-- <a href="orderDetails.php" class="btn btn-primary">Order Details</a> -->
+          <!-- <a href="../cart.php" class="btn btn-primary">Cart Details</a> -->
         
         
     		

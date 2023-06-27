@@ -11,6 +11,6 @@
 
     $connection->query($sql);
     
-    header("Location:../log.php");
+    echo "<script>alert('delete account succesfull.'); window.location.href = '../index.html';</script>";
 
 ?>

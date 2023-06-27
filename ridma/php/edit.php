@@ -91,7 +91,7 @@ if(isset($_POST['fname']) &&
 
 
 }else {
-	header("Location: login.php");
+	header("Location:login.php");
 	exit;
 } 
 

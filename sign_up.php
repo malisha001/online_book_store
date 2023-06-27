@@ -32,13 +32,13 @@
                         <div class="input-field">
                             <input id="pswd" type="password" placeholder="Enter your password" name="pswd" required>
                             <i class="uil uil-padlock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
+                            
                         </div>
                         <p id="error3"></p>
                         <div class="input-field">
                             <input id="cpwd" type="password" placeholder="confirm password" name="cpasswd" required>
                             <i class="uil uil-padlock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
+                            
                         </div>
                         <p id="error4"></p>
                         <!-- <div class="forgot">

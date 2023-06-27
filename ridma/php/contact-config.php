@@ -1,6 +1,19 @@
 <?php
 session_start();
-require '../connection.php';
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "online_bookstore";
+
+//create connection object
+$conn = new mysqli($servername,$username,$password,$db);
+
+//check connection
+if ($conn->connect_error){
+    die("connection failed:" . $conn->connect_error);
+}
+
 
 
 if(isset($_POST['contactDetails']))
@@ -11,7 +24,7 @@ if(isset($_POST['contactDetails']))
     $phone = mysqli_real_escape_string($connection, $_POST['phone']);
     $message = mysqli_real_escape_string($connection, $_POST['message']);
 
-    $query = "INSERT INTO contactus (fname,lname,email,phone,message) VALUES ('$fname','$lname','$email','$phone','$message')";
+    $query = "INSERT INTO ontactus (first_name,last_name,email,number,quection) VALUES ('$fname','$lname','$email','$phone','$message')";
 
     $query_run = mysqli_query($connection, $query);
     if($query_run)
